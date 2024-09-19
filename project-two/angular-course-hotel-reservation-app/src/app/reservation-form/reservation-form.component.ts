@@ -30,13 +30,14 @@ export class ReservationFormComponent implements OnInit {
       roomNumber: ['', Validators.required]
     })
 
+    //this is to read the "id" from the uri
     let id = this.activatedRoute.snapshot.paramMap.get('id')
 
     if(id){
       let reservation = this.reservationService.getReservation(id)
 
       if(reservation)
-        this.reservationForm.patchValue(reservation)
+        this.reservationForm.patchValue(reservation) //patchValue(obj) is to populate the form
     }
   }
 
