@@ -12,7 +12,7 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     RouterModule
   ], exports: [
-    HomeComponent
+    HomeComponent //allow other modules to use this components
   ]
 })
 export class HomeModule { }
